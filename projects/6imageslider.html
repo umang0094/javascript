@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        img{
+            width: 100%;
+            height:100%;
+        }
+        
+
+
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div >
+            <img  alt="" name="image1" id="image">
+        </div>
+        
+
+    </div>
+
+
+    <script>
+        var i = 0;
+        var time = 3000;
+        var img = document.getElementById("image")
+        var image = ["src/image slider/pexels-maxime-francis-2246476.jpg",
+                      "src/image slider/car.jpg",
+                      "src/image slider/clean.jpg",
+                      "src/image slider/man.jpg",
+                      "src/image slider/rose.jpg"  ];
+
+        function changeImg(){
+           document.image1.src = image[i]
+
+            if (i < image.length) {
+                i++;
+            }else{
+                i = 0;
+            }
+            setInterval(changeImg,time)
+        }
+        window.onload = changeImg;
+        
+           
+            
+            
+     
+            
+            
+
+
+    </script>
+</body>
+</html>

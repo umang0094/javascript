@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass the Message</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: aquamarine;
+        }
+        div{
+            text-align: center;
+            margin-top: 250px;
+        }
+        #message-recieve{
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        label{
+            font-size: 30px;
+        }
+        #message{
+            width: 250px;
+            height: 28px;
+        }
+        #submit{
+            margin-top: 30px;
+            transform: scale(1.8);
+            background-color: yellow;
+         }
+         #Clear{
+             transform: scale(1.8);
+             background-color: yellow;
+             margin-left: 60px;
+         }
+         #message-deliver{
+             margin-top: 20px;
+             font-size: 25px;
+             font-weight: 500;
+         }
+
+
+    </style>
+</head>
+<body>
+    <div id="mesaage-sent">
+        <h1>A Message you would like to pass</h1>
+        <label for="message">Message:</label>
+        <input type="text" id="message"><br>
+        <input type="submit" value="Submit" id="submit" onclick="getInputValue()">
+        <input type="submit" value="Clear" id="Clear" onclick="getClearValue()">
+    </div>
+    <div id="message-recieve">
+        <h1>Last Message sent</h1>
+</div>
+<div id="message-deliver">
+    
+</div>
+
+    <script>
+        function getInputValue(){
+            var x = document.getElementById("message-sent");
+            var mess = document.getElementById("message").value;
+            
+            var add = document.getElementById("message-deliver");
+            add.innerHTML += mess;
+            add.innerHTML += "<br>";
+            document.getElementById("message").value = "";
+        }
+        
+        function getClearValue(){
+            var reset = document.getElementById("message-deliver");
+            reset.remove();
+            
+        }
+        
+        
+    </script>
+</body>
+</html>

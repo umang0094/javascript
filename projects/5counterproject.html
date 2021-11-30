@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add and subtract count</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: #1adae7;
+        }
+        div{
+            text-align: center;
+            margin-top: 200px;
+        }
+        h1{
+            font-size: 80px;
+        }
+
+        button{
+            margin-top: 50px;
+            transform:  scale(1.8);
+            background-color: rgb(231, 137, 231);
+        }
+        #add{
+            margin-left: 80px;
+        }
+        p{
+            font-size: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="counter">
+        <h1>Counter</h1>
+        <p id="count">0</p>
+        
+        <button id="subtract" onclick="getSubtract()">Subtract count</button>
+        <button id="add" onclick="getAdd()">Add count</button>
+    </div>
+
+    <script>
+        var count = 0;
+        var sum = 0;
+        var p = document.getElementById("count");
+
+            function getSubtract(){
+                if(count==0){
+                    alert("Count is 0 first add then subtract")
+                }
+                else{
+                    count+= -1;
+                    p.innerHTML = count;
+
+                }
+            }
+            function getAdd(){
+                
+                count+=1;
+
+                p.innerHTML =count;
+            }
+            console.log(count);
+
+    </script>
+</body>
+</html>

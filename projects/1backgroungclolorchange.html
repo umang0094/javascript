@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Background color change </title>
+
+    <style>
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+            height: 600px;
+        }
+
+        button{
+            width: 20%;
+            height: 50px;
+            border-width: 2px;
+        }
+    </style>
+</head>
+<body id="body">
+    <div>
+        <button onclick="onClick()">Click me to change color</button> 
+    </div>
+   <script>
+       var body = document.getElementById("body");
+       var arr = ["red","yellow","blue","pink","violet","black","grey","cyan","orange"];
+       function onClick(){
+           var x = Math.floor(Math.random()*10);
+           body.style.backgroundColor = arr[x];
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            background-color: violet;
+        }
+        body{
+            text-align: center;
+            margin-top: 300px;
+            
+        }
+        .main{
+            
+            width: 500px;
+            height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 5px;
+        }
+        span{
+            font-size: 30px;
+        }
+        .author{
+            float: right;
+            padding-right: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+        }
+        .main .quote{
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        .btn{
+            clear: both;
+        }
+        button{
+            width: 130px;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            margin-top: 5px;
+        }
+        button:hover{
+            transform: scale(1.5);
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Random Quote Genrator!</h1>
+        </div>
+        <div class="quote" >
+            <span>"Once you replace negative thoughts with positive ones, you'll start having positive results."</span>
+        </div>
+        <div class="author">
+            <span>-Willie Nelson</span>
+
+        </div>
+        <div id="btn">
+            <button onclick="onClick()">Next quote</button>
+
+        </div>
+    </div>
+
+    <script>
+        var quote = document.querySelector(".quote");
+        var author = document.querySelector(".author");
+        
+
+        function onClick(){
+            var random = Math.floor(Math.random()*10);
+            console.log(random);
+            quote.innerHTML = quotes[random].quote;
+            author.inerHTML = quotes[random].author;
+        }
+
+        var quotes = [
+        {
+            quote : `The most important thing is to try and inspire people so that they can be great in whatever they want to do.`,
+            author : ` Kobe Bryant`
+        },
+        {
+            quote : `Yesterday is not ours to recover, but tomorrow is ours to win or lose. `,
+            author : `Lyndon B. Johnson`
+        },
+        {
+            quote : `Live life to the fullest, and focus on the positive.`,
+            author : `Matt Cameron`
+        },
+        {
+            quote : `Every day brings new choices.`,
+            author : `Martha Beck`
+        },
+        {
+            quote : `I truly believe that everything that we do and everyone that we meet is put in our path for a purpose. There are no accidents; we're all teachers - if we're willing to pay attention to the lessons we learn, trust our positive instincts and not be afraid to take risks or wait for some miracle to come knocking at our door. `,
+            author : `Marla Gibbs`
+        },
+        {
+            quote : `I think anything is possible if you have the mindset and the will and desire to do it and put the time in. `,
+            author : `Roger Clemens`
+        },
+        {
+            quote : `Correction does much, but encouragement does more.`,
+            author : `Johann Wolfgang von Goethe`
+        },
+        {
+            quote : `Positive thinking will let you do everything better than negative thinking will. `,
+            author : `Zig Ziglar`
+        },
+        {
+            quote : `When you wake up every day, you have two choices. You can either be positive or negative; an optimist or a pessimist. I choose to be an optimist. It's all a matter of perspective. `,
+            author : `Harvey Mackay`
+        },
+        {
+            quote : `I believe if you keep your faith, you keep your trust, you keep the right attitude, if you're grateful, you'll see God open up new doors.`,
+            author : `Joel Osteen`
+        },
+        {
+            quote : `Positive anything is better than negative nothing. `,
+            author : `Elbert Hubbard`
+        }
+        
+    
+    
+    ]
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexadecimal background color change</title>
+
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        div{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        button{
+            font-size: 30px;
+            padding: 10px;
+            border-width: 3px;
+        }
+        h1{
+            float: left;
+            font-size: 40px;
+        }
+        
+    </style>
+</head>
+<body id="body">
+    <div>
+        <button onclick="onClick()">Click to change color</button>
+        <br>
+        <h1 id="h1">Color code</h1>
+    </div>
+
+    <script>
+        var body = document.getElementById("body");
+        var btn = document.getElementsByTagName("button");
+        var heading = document.querySelector("h1");
+
+        function onClick() {
+            var color = "#";
+            var random = Math.random().toString(16).slice(2,8);
+            color += random;
+            body.style.backgroundColor = color;
+            heading.innerText = color;
+        }
+
+            </script>
+    
+</body>
+</html>
